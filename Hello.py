@@ -17,18 +17,6 @@ from streamlit.logger import get_logger
 
 LOGGER = get_logger(__name__)
 
-import streamlit as st
-
-# ボタンが押された回数を保持する
-if "count" not in st.session_state:
-    st.session_state.count = 0
-
-# ボタンを表示し、クリックされた回数を表示する
-if st.button("Click me"):
-    st.session_state.count += 1
-
-st.write(f"You clicked the button {st.session_state.count} times.")
-
 def run():
     st.set_page_config(
         page_title="Hello",
